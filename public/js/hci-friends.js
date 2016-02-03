@@ -5,6 +5,14 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$("a h3").click(function(event) {
+	event.preventDefault();
+	//console.log("Friend name clicked");
+	var getName = $(this).text();
+	var newName = anagrammedName(getName);
+	$(this).text(newName);
+})
+
 /*
  * Function that is called when the document is ready.
  */
@@ -44,3 +52,5 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+
